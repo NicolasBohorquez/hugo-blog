@@ -1,3 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://myviewis.netlify.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My View'
+
+theme = "mainroad"
