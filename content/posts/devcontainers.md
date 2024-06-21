@@ -1,10 +1,30 @@
-+++
-title = 'Creating a devcontainer'
-slug = 'devcontainers'
-date = 2024-06-20T23:10:26Z
-thumbnail = 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tiecbup46xjg7vf8wqkx.png'
-draft = false
-+++
+---
+# Common-Defined params
+title: "Creating a devcontainer"
+date: "2024-06-20T23:10:26Z"
+description: "Example article description"
+categories:
+  - "Category 1"
+  - "Category 2"
+tags:
+  - "Test"
+  - "Another test"
+menu: main # Optional, add page to a menu. Options: main, side, footer
+
+# Theme-Defined params
+thumbnail: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mffvrwlp2ovvj4b7703m.jpg" # Thumbnail image
+lead: "Devcontainers using open source extensions for VSCode" # Lead text
+comments: false # Enable Disqus comments for specific page
+authorbox: true # Enable authorbox for specific page
+pager: true # Enable pager navigation (prev/next) for specific page
+toc: true # Enable Table of Contents for specific page
+mathjax: true # Enable MathJax for specific page
+sidebar: "right" # Enable sidebar (on the right side) per page
+widgets: # Enable sidebar widgets in given order per page
+  - "search"
+  - "recent"
+  - "taglist"
+---
 
 **TL;DR**: You can create [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers) in ~~VSCode~~ [VSCodium](https://vscodium.com/#why-does-this-exist) using open source [extensions](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs) to avoid M$ telemetry.
 
