@@ -1,0 +1,148 @@
+---
+# Common-Defined params
+title: "Paletas de Colores en Libreoffice"
+date: "2016-02-17"
+lastmod: "2024-06-22"
+description: "Cómo crear y usar nuevas paletas de colores en Libreoffice"
+lead: "El colo " # Lead text
+thumbnail: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mffvrwlp2ovvj4b7703m.jpg" # Thumbnail image
+lang: es
+categories:
+  - "Data Viz"
+tags:
+  - "Color"
+  - "Libreoffice"
+  - "Comunicación"
+draft: true
+menu: side # Optional, add page to a menu. Options: main, side, footer
+comments: false # Enable Disqus comments for specific page
+authorbox: true # Enable authorbox for specific page
+pager: true # Enable pager navigation (prev/next) for specific page
+toc: true # Enable Table of Contents for specific page
+sidebar: "right" # Enable sidebar (on the right side) per page
+widgets: # Enable sidebar widgets in given order per page
+  - "search"
+  - "recent"
+  - "taglist"
+  - "social"
+---
+
+Brief
+
+<!--more-->
+
+https://medium.com/@Elijah_Meeks/viz-palette-for-data-visualization-color-8e678d996077
+
+https://sk1project.net/ - RIP Ihor Novikov (1971 - 2021)
+
+https://sk1project.net/palettes/ - Not working
+
+
+
+Color Palette Collection
+
+We have collected and processed the color palettes that, as we think, may be useful for graphics design. Our primary goal was to provide sK1 users with a good set of color swatches like other graphics software. But sK1 application got a lot of filters for different color palette file formats. Therefore we prepared this collection available for wide range of graphics applications as open source and commercial:
+
+    sK1
+    Inkscape
+    GIMP
+    Scribus
+    Karbon
+    Calligra
+    LibreOffice
+    CorelDRAW, Corel PhotoPaint
+    Adobe Illustrator, Adobe InDesign
+    Adobe Photoshop
+    Xara Designer, Xara Web Designer
+
+All the color palette files are released into the Public Domain. So you may use them even for unlimited commercial use.
+Android ICS colors
+Android ICS colors
+Android icon colors
+Android icon colors
+Bluecurve icon colors
+Bluecurve icon colors
+CSS3 named colors
+CSS3 named colors
+Color names supported by all browsers (sorted)
+Color names supported by all browsers (sorted)
+Color names supported by all browsers
+Color names supported by all browsers
+Echo Icon Theme Palette
+Echo Icon Theme Palette
+Eclipse icon 256 Color Palette
+Eclipse icon 256 Color Palette
+Eclipse icon 8-color palette
+Eclipse icon 8-color palette
+Fedora color palette
+Fedora color palette
+Flat UI colors
+Flat UI colors
+Google Material design palette
+Google Material design palette
+Grayscale palette
+Grayscale palette
+Lible Colors
+Lible Colors
+LibreOffice branding colors
+LibreOffice branding colors
+MS Office 2013 gray colors
+MS Office 2013 gray colors
+MS Office 2013 primary colors
+MS Office 2013 primary colors
+MS Office 2013 text colors
+MS Office 2013 text colors
+Mageia colors
+Mageia colors
+Matplotlib named colors
+Matplotlib named colors
+Oxygen colors
+Oxygen colors
+SVG named colors (sorted)
+SVG named colors (sorted)
+SVG named colors
+SVG named colors
+Tango icon palette
+Tango icon palette
+Tk named colors
+Tk named colors
+Tk unique named colors
+Tk unique named colors
+Ubuntu color tints
+Ubuntu color tints
+Ubuntu colors
+Ubuntu colors
+Web Safe Colors
+Web Safe Colors
+Windows 10 colors
+Windows 10 colors
+Windows 10 personalizing colors
+Windows 10 personalizing colors
+Windows 8 colors
+Windows 8 colors
+Windows Phone 7 colors
+Windows Phone 7 colors
+Windows Phone 7.5 colors
+Windows Phone 7.5 colors
+Windows Phone 8 colors
+Windows Phone 8 colors
+Windows XP basic colors
+Windows XP basic colors
+Windows XP icon colors
+Windows XP icon colors
+X11 named colors
+X11 named colors
+iOS 7 colors
+iOS 7 colors
+openSUSE colors
+openSUSE colors
+wxPython named colors
+wxPython named colors
+
+https://coolors.co/4effef-73a6ad-9b97b2-d8a7ca-c7b8ea
+
+https://extensions.libreoffice.org/en/extensions/show/palettemaker - Palette maker
+
+security img/libreoffice-sec.png
+
+https://ask.libreoffice.org/t/background-color-pallete/36857/6
