@@ -1,0 +1,63 @@
+---
+# Common-Defined params
+title: "Libre es mejor que gratis"
+date: "2016-02=23"
+lastmod: "2024-06-21"
+description: "Por qué estoy convencido de que libre es mejor que gratis?"
+lead: "No hay almuerzos gratis, pero si existen almuerzos libres" # Lead text
+lang: es
+thumbnail: "img/wil-stewart-UErWoQEoMrc-unsplash.jpg" # Thumbnail image
+categories:
+  - "Opinion"
+tags:
+  - "FOOS"
+draft: false
+menu: side # Optional, add page to a menu. Options: main, side, footer
+comments: false # Enable Disqus comments for specific page
+authorbox: true # Enable authorbox for specific page
+pager: true # Enable pager navigation (prev/next) for specific page
+toc: false # Enable Table of Contents for specific page
+sidebar: "right" # Enable sidebar (on the right side) per page
+widgets: # Enable sidebar widgets in given order per page
+  - "search"
+  - "recent"
+  - "taglist"
+  - "social"
+---
+
+En un [debate](https://caracol.com.co/programa/2012/04/19/audios/1334861520_673102.html) público sobre una ley de derechos de autor, notamos que hay un funcionario en Colombia (Director Nacional de derechos de autor) que ignora la diferencia entre Libre y Gratis. Lo cual debería ser en mi opinión causal de despido por incompetencia dado el cargo del funcionario.
+
+<!--more-->
+
+En internet *gratis* implica que algo puede usarse para los fines establecidos por el fabricante sin pago, bajo algunas -generalmente muchas- restricciones y con, generalmente, un costo oculto.
+
+En internet *libre* implica que algo puede usarse para los fines que el usuario desee sin pago, bajo algunas -generalmente pocas- restricciones y con, generalmente, la libertad de modificar ese algo a voluntad.
+
+## Una metáfora
+
+Imagine tres corrales de pollos, el primero tiene pollos asados -con o sin la receta [secreta](http://es.wikipedia.org/wiki/Kentucky_Fried_Chicken#Controversia)-, el segundo pollos vivos [sin plumas](www.elmundo.es/cronica/2002/345/1022488509.html) con la etiqueta *“tome uno, es gratis”*, y finalmente, el tercero con pollos de campo luchando por la comida que encuentran en la tierra -algunos flacos y feos, otros viejos y muchos pequeñitos y muy llorones-.
+
+En el primer corral están los productos/servicios pagos, usted obtiene lo que paga (*un valor agregado = una receta “secreta”*) y espera que lo hagan lo mejor posible. En el segundo corral usted obtiene los pollos gratis, con el hambre que tiene -y como bien dice el refrán: *gratis hasta un puño*- usted no se para a investigar si la compañía que regala esos pollos tiene inversiones en medicinas contra el cáncer, investigación genética, propiedad intelectual y semillas que secan la tierra.
+
+Tampoco vale la pena leer el contrato de letra pequeña, seguro incluye las viejas cláusulas comunes como:
+
+    Usted solo puede comer ese pollo si lo sazona con las especias que produce la compañia
+    Usted no podrá ceder ese pollo a ninguna otra persona
+    Usted no podrá engordar mas al pollo o ponerle nombre
+    Usted no podrá usar ese pollo para generar nuevos pollos -nada de tener una granja de pollos propia-
+    Usted no podrá enseñarle ningún truco al pollo o exhibirlo como su mascota sin pagarle a la compañia
+    Si la compañia lo considera necesario podrá entrar a su cocina y ver cómo cocina el pollo, cómo lo sirve, cuando lo come, a quién le cuenta que lo comió y por supuesto saber si lo compartió con alguien.
+    La compañía se reserva el derecho de urgar en su basura para tomar muestras de la forma en la que procesó el pollo después de comérselo, esto para saber si usted puede desarrollar un cáncer y ofrecerle el tratamiento completo de fármacos de la compañia
+    La compañía se reserva el derecho de permitirle comer el pollo con o sin guantes
+
+Por otro lado si usted toma un pollo del tercer corral tendrá muchas más cosas *“divertidas”* -leáse engorrosas, nada populares y en las que se invierte mucho tiempo- para hacer antes, durante y después de comerlo, entre otras:
+
+    Tratar de amarrarlo para poder llevarlo a casa, porque a diferencia de los pollos sin plumas, éstos pollos no están acostumbrados a ser metidos en cajas ni en camionetas y se necesita saber como atraparlos y manejarlos
+    Matar el pollo, implica que usted necesitará: valor, herramientas y formas de manejar los desperdicios
+    Dejar cocinando el pollo muuuuucho más tiempo, porque hay que desplumarlo y, como no viene sazonado, hay que conseguir las doce especias del coronel.
+
+Ahora bien, si usted quiere puede engordar un poco más al pollo, o enseñarle algunos [trucos](https://www.youtube.com/watch?v=vOqyjcrmZb8 Roaster doing tricks) para exhibirlo y ganar algo de dinero antes de enfrentarlo a su destino. 
+
+Finalmente, si quiere puede contarle al mundo entero lo que hizo o aprendió con su pollo y, como la cortesía obliga, permitir que otras personas tomen un pollo de forma libre de su granja de pollos.
+
+Para mí es más divertido y mejor Libre que Gratis.
