@@ -1,0 +1,193 @@
+---
+# Common-Defined params
+title: "Creating a devcontainer"
+date: "2024-06-20T23:10:26Z"
+lastmod: "2024-06-21T23:10:26Z"
+description: "How to start a devcontainer using VSCodium and open source extensions"
+lang: en
+categories:
+  - "Devrgonomics"
+tags:
+  - "Devcontainers"
+  - "Quarkus"
+  - "VSCodium"
+menu: side # Optional, add page to a menu. Options: main, side, footer
+
+# Theme-Defined params
+thumbnail: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mffvrwlp2ovvj4b7703m.jpg" # Thumbnail image
+lead: "Devcontainers using open source extensions for VSCode" # Lead text
+comments: false # Enable Disqus comments for specific page
+authorbox: true # Enable authorbox for specific page
+pager: true # Enable pager navigation (prev/next) for specific page
+toc: true # Enable Table of Contents for specific page
+sidebar: "right" # Enable sidebar (on the right side) per page
+widgets: # Enable sidebar widgets in given order per page
+  - "search"
+  - "recent"
+  - "taglist"
+  - "social"
+---
+
+You can create [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers) in ~~VSCode~~ [VSCodium](https://vscodium.com/#why-does-this-exist) using open source [extensions](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs) to avoid M$ telemetry.
+
+<!--more-->
+
+
+## Context 
+
+A great idea for development are [devcontainers](https://containers.dev/), which means that instead of installing the dev tools (compilers, linters, sidecar tools, etc.) inside your local machine, you use a preconfigured docker image, run it as a container and finally connect your IDE to that container in order to edit the code locally.
+
+Following diagram explains the concept:
+
+![Local machine with devcontainer](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rvt37jvjllv3lnb1cebe.png)
+[Image source as mermaid diagram](https://gist.github.com/NicolasBohorquez/7a1e4aa629edb2c2e7fb1871fa63b6ca)
+
+Which means that you can have in your local machine several virtual environments (taking the expression from python) without installing a single programming language!.
+
+## The 1% problem
+
+Devcontainers is a concept that you can implement in many combinations of container tech (docker, podman) and IDEs (VSCode, InteliJ, etc.). To avoid the M$ telemetry that is present in VSCode, I stand in giant's shoulders and use [VSCodium](https://vscodium.com).
+
+VSCodium is 99% compatible with VSCode, the remainder 1% its expressed in this kind of edge cases, specifically it cannot install/use the Microsoft's [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers) extension. Let's fix it using open source!
+
+## Pre-requisites
+
+To use this version of dev containers you need:
+
+- [Docker](https://docs.docker.com) + [Compose](https://docs.docker.com/compose/) installed
+- VSCodium with 
+  - [SSH FS](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs) extension 
+  - [Docker](https://code.visualstudio.com/docs/containers/overview) extension (Optional)
+- A Docker image to run (with your dev tools installed: programming language, build tools, etc)
+
+## Open Devcontainers
+
+To setup a devcontainer you need an image to run, as a simple example, following Dockerfile setups an Ubuntu Noble (24.04 LTS) 1.46GB image that contains:
+
+- [Nano](https://www.nano-editor.org/) a simple CLI editor
+- [Git](https://git-scm.com/) the standard DVCS
+- [SDKMan](https://sdkman.io/): A tool used to install JVM related tools
+- [OpenJDK 21](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/what-is-corretto-21.html): The Latest JavaDevKit LTS distribution, you can change it easily using sdkman 
+- [Maven 3.9](https://maven.apache.org/): A Java Building tool
+- [Quarkus 3.8](https://quarkus.io/blog/lts-releases/): A modern Java framework for CLI, Web, FaaS, Cloud native apps
+- [Dapr 1.13](https://docs.dapr.io/concepts/overview/): A polyglot runtime sidecar to develop modern apps
+
+But you can, and should, create your own standard images with your personal choices (gradle instead of maven?, micronaut instead of quarkus?, amazon coretto instead of OpenJDK?, Python instead of Java?, Fedora instead of Ubuntu?).
+
+```Dockerfile
+# Build Ubuntu image with base functionality.
+FROM ubuntu:noble AS ubuntu-base
+ENV DEBIAN_FRONTEND noninteractive
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# Setup the default user.
+RUN groupadd docker 
+#RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -g docker -G sudo ubuntu
+RUN echo 'ubuntu:ubuntu' | chpasswd
+USER ubuntu
+WORKDIR /home/ubuntu
+
+# Build image with Python and SSHD.
+FROM ubuntu-base AS ubuntu-with-sshd
+USER root
+
+# adds docker repo
+RUN install -m 0755 -d /etc/apt/keyrings
+
+# Install required tools.
+RUN apt-get -qq update \
+    && apt-get -qq --no-install-recommends install ca-certificates \
+    && apt-get -qq --no-install-recommends install sudo \
+    && apt-get -qq --no-install-recommends install vim \
+    && apt-get -qq --no-install-recommends install nano \
+    && apt-get -qq --no-install-recommends install curl \
+    && apt-get -qq --no-install-recommends install openssh-server \
+    && apt-get -qq --no-install-recommends install git \
+    && apt-get -qq --no-install-recommends install zip \
+    && apt-get -qq --no-install-recommends install unzip \
+    && apt-get -qq clean    \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+RUN chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add docker's repository to Apt sources:
+RUN echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    tee /etc/apt/sources.list.d/docker.list > /dev/null
+RUN apt-get update
+
+# Configure SSHD.
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+RUN mkdir /var/run/sshd
+RUN bash -c 'install -m755 <(printf "#!/bin/sh\nexit 0") /usr/sbin/policy-rc.d'
+RUN ex +'%s/^#\zeListenAddress/\1/g' -scwq /etc/ssh/sshd_config
+RUN ex +'%s/^#\zeHostKey .*ssh_host_.*_key/\1/g' -scwq /etc/ssh/sshd_config
+RUN RUNLEVEL=1 dpkg-reconfigure openssh-server
+RUN ssh-keygen -A -v
+RUN update-rc.d ssh defaults
+
+# Configure sudo.
+RUN ex +"%s/^%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/g" -scwq! /etc/sudoers
+# install docker
+RUN curl https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz | tar xvz -C /tmp/ && mv /tmp/docker/docker /usr/bin/docker
+RUN curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+# install dapr
+RUN curl -s https://raw.githubusercontent.com/dapr/cli/master/install/install.sh | /bin/bash -s 1.13.0
+
+# Generate and configure user keys.
+USER ubuntu  
+WORKDIR /home/ubuntu
+
+# install sdkman
+RUN curl -s "https://get.sdkman.io" | bash
+# this SHELL command is needed to allow using source
+SHELL ["/bin/bash", "-c"]  
+# seems you need to put 'sdk install...'' lines in same RUN command as 'source...'.
+RUN source "/home/ubuntu/.sdkman/bin/sdkman-init.sh"   \
+                && sdk install java 21.0.2-open    \
+                && sdk install maven 3.9.7    \
+                && sdk install quarkus 3.8.5
+RUN ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
+
+#creates a local folder to host code
+RUN mkdir code
+# Starts dapr local env without docker
+RUN dapr init --slim
+# Setup default command and/or parameters.
+EXPOSE 22
+# Expose default quarkus app port.
+EXPOSE 8080
+CMD ["/usr/bin/sudo", "/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]
+```
+You can build this image locally using:
+
+```sh
+docker build -f Dockerfile.devcontainer -t your-company/devcontainer-quarkus-3.8 .
+```
+Or better, setup a private Docker registry to be used by your entire organization (even if it is just you) to keep an organized repo of trusted sources.
+
+Once you have the image, run it as a container using:
+```sh
+ docker run -p [::1]:2022:22 -p [::1]:8080:8080 your-company/devcontainer-quarkus-3.8
+```
+this will link the container's 22 port 22 to your local 2022 and expose it as an ip v6 ([::1]), you can run the container also by using the Docker extension for VSCodium or even the Docker desktop app.
+
+Now, to connect to the container you must setup a new configuration in SSH FS that points to the running container, the important details are:
+
+- Host: ::1  
+- Port: 2022
+- Root: /home/ubuntu
+- User: ubuntu
+- Password: ubuntu
+- Extend: None
+
+Now, with that connection you should add it as a Workspace folder to add new files or open a remote ssh terminal to download your code from a repo.
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tiecbup46xjg7vf8wqkx.png)
+
+Be careful, the container is not mounting a volume, so, when you stop it the changes in the file system (your code, the dependencies downloaded with the Build Tool, etc) will be lost. You can handle that by mounting a volume attached to your local machine or by applying a healthy git-fetch/git-push dev cycle (I'll cover this in a following post).
+
+Happy coding!.
