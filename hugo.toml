@@ -6,23 +6,68 @@ theme = "mainroad"
 
 
 [Author] # Used in authorbox
-  name = "Nicolas Bohorquez"
-  bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand"
+  bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
   avatar = "img/avatar.png"
 
 [Params]
-  description = "Nicolas' Personal blog about everything" # Site description. Used in meta description
-  copyright = "Nicolas Bohorquez" # Footer copyright holder, otherwise will use site title
-  opengraph = true # Enable OpenGraph if true
-  schema = true # Enable Schema
-  twitter_cards = true # Enable Twitter Cards if true
-  readmore = true # Show "Read more" button in list if true
   authorbox = true # Show authorbox at bottom of pages if true
-  toc = true # Enable Table of Contents
-  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
-  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
-  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
-  dateformat = "2006-01-02" # Change the format of dates
-  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  copyright = "Nicolas Bohorquez" # Footer copyright holder, otherwise will use site title
   customCSS = ["css/custom.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
+  dateformat = "2006-01-02" # Change the format of dates
+  description = "Nicolas' Personal blog about everything. Title quote is from John Lubbock" # Site description. Used in meta description
+  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  mainSections = ["posts", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  name = "Nicolas Bohorquez"
+  opengraph = true # Enable OpenGraph if true
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
+  readmore = true # Show "Read more" button in list if true
+  schema = true # Enable Schema
+  toc = true # Enable Table of Contents
+  twitter_cards = true # Enable Twitter Cards if true
+
+[Params.style.vars]
+  highlightColor = "#588157" #"#e22d30"
+
+[Params.logo]
+  #image = "img/placeholder.png"
+  title = "My View"
+  subtitle = "What we do see depends mainly on what we look for"
+
+[Params.sidebar]
+  home = "right"
+  list = "right"
+  single = "right"
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets.search]
+  cached = true
+  url = "https://duckduckgo.com/"
+  [Params.widgets.search.input]
+    name = "sites"
+    pre = ""
+
+[Params.widgets.recent]
+  cached = true
+
+[Params.widgets.categories]
+  cached = true
+
+[Params.widgets.taglist]
+  cached = true
+
+[Params.widgets.social]
+  cached = true
+  twitter = "nickmancol"
+  linkedin = "nickmancol"
+  github = "NicolasBohorquez"
+
+[[Params.widgets.social.custom]]
+  title = "Axumption"
+  url = "https://axumption.com"
+  rel = "me"
+  #icon = "axumption.svg"
+
+[Params.widgets.languages]
+  cached = true
