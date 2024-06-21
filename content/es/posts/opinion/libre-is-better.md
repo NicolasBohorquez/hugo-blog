@@ -1,12 +1,12 @@
 ---
 # Common-Defined params
 title: "Libre es mejor que gratis"
-date: "2016-02=23"
+date: "2016-02-23"
 lastmod: "2024-06-21"
 description: "Por qué estoy convencido de que libre es mejor que gratis?"
 lead: "No hay almuerzos gratis, pero si existen almuerzos libres" # Lead text
 lang: es
-thumbnail: "img/wil-stewart-UErWoQEoMrc-unsplash.jpg" # Thumbnail image
+thumbnail: "img/posts/wil-stewart-UErWoQEoMrc-unsplash.jpg" # Thumbnail image
 categories:
   - "Opinion"
 tags:
@@ -18,11 +18,11 @@ authorbox: true # Enable authorbox for specific page
 pager: true # Enable pager navigation (prev/next) for specific page
 toc: false # Enable Table of Contents for specific page
 sidebar: "right" # Enable sidebar (on the right side) per page
-widgets: # Enable sidebar widgets in given order per page
-  - "search"
-  - "recent"
-  - "taglist"
-  - "social"
+resources:
+    - src: 'img/posts/wil-stewart-UErWoQEoMrc-unsplash.jpg'
+      params:
+          licence: MIT
+          caption: 'Photo by <a href="https://unsplash.com/@wilstewart3?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wil Stewart</a> on <a href="https://unsplash.com/photos/photography-of-person-holding-glass-bottles-during-sunset-UErWoQEoMrc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
 ---
 
 En un [debate](https://caracol.com.co/programa/2012/04/19/audios/1334861520_673102.html) público sobre una ley de derechos de autor, notamos que hay un funcionario en Colombia (Director Nacional de derechos de autor) que ignora la diferencia entre Libre y Gratis. Lo cual debería ser en mi opinión causal de despido por incompetencia dado el cargo del funcionario.
