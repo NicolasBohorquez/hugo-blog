@@ -1,4 +1,4 @@
-baseURL = 'https://myviewis.netlify.com/'
+baseURL = 'https://myview.is/en/'
 languageCode = 'en-us'
 title = 'My View'
 
@@ -15,6 +15,7 @@ defaultContentLanguageInSubdir = true
     languageName = 'English'
     weight = 1
   [languages.es]
+    baseURL = 'https://myview.is/es/'
     contentDir = 'content/es'
     disabled = false
     languageCode = 'es-CO'
