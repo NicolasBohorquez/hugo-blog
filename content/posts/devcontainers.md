@@ -3,7 +3,7 @@ title = 'Creating a devcontainer'
 slug = 'devcontainers'
 date = 2024-06-20T23:10:26Z
 thumbnail = 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tiecbup46xjg7vf8wqkx.png'
-draft = true
+draft = false
 +++
 
 **TL;DR**: You can create [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers) in ~~VSCode~~ [VSCodium](https://vscodium.com/#why-does-this-exist) using open source [extensions](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs) to avoid M$ telemetry.
