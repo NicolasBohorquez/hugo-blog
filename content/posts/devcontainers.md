@@ -156,6 +156,8 @@ RUN mkdir code
 RUN dapr init --slim
 # Setup default command and/or parameters.
 EXPOSE 22
+# Expose default quarkus app port.
+EXPOSE 8080
 CMD ["/usr/bin/sudo", "/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]
 ```
 You can build this image locally using:
@@ -167,7 +169,7 @@ Or better, setup a private Docker registry to be used by your entire organizatio
 
 Once you have the image, run it as a container using:
 ```sh
- docker run -p [::1]:2022:22 your-company/devcontainer-quarkus-3.8
+ docker run -p [::1]:2022:22 -p [::1]:8080:8080 your-company/devcontainer-quarkus-3.8
 ```
 this will link the container's 22 port 22 to your local 2022 and expose it as an ip v6 ([::1]), you can run the container also by using the Docker extension for VSCodium or even the Docker desktop app.
 
