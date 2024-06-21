@@ -13,7 +13,7 @@ theme = "mainroad"
   authorbox = true # Show authorbox at bottom of pages if true
   copyright = "Nicolas Bohorquez" # Footer copyright holder, otherwise will use site title
   customCSS = ["css/custom.css"] # Include custom CSS files
-  customJS = ["js/custom.js"] # Include custom JS files
+  customJS = ["js/custom.js","js/posthog.js"] # Include custom JS files
   dateformat = "2006-01-02" # Change the format of dates
   description = "Nicolas' Personal blog about everything. Title quote is from John Lubbock" # Site description. Used in meta description
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
