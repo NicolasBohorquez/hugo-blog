@@ -4,7 +4,27 @@ title = 'My View'
 
 theme = "mainroad"
 
-
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    disabled = false
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    weight = 1
+  [languages.es]
+    contentDir = 'content/es'
+    disabled = false
+    languageCode = 'es-CO'
+    languageDirection = 'ltr'
+    languageName = 'Español'
+    title = 'MyView'
+    weight = 2
+    [languages.es.params.logo]
+      subtitle = 'Lo que ves depende de lo que estas buscando'
+    
 [Author] # Used in authorbox
   bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
   avatar = "img/avatar.png"
