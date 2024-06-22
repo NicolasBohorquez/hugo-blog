@@ -18,11 +18,6 @@ authorbox: true # Enable authorbox for specific page
 pager: true # Enable pager navigation (prev/next) for specific page
 toc: false # Enable Table of Contents for specific page
 sidebar: "right" # Enable sidebar (on the right side) per page
-resources:
-    - src: 'img/posts/wil-stewart-UErWoQEoMrc-unsplash.jpg'
-      params:
-          licence: MIT
-          caption: 'Photo by <a href="https://unsplash.com/@wilstewart3?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wil Stewart</a> on <a href="https://unsplash.com/photos/photography-of-person-holding-glass-bottles-during-sunset-UErWoQEoMrc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
 ---
 
 En un [debate](https://caracol.com.co/programa/2012/04/19/audios/1334861520_673102.html) público sobre una ley de derechos de autor, notamos que hay un funcionario en Colombia (Director Nacional de derechos de autor) que ignora la diferencia entre Libre y Gratis. Lo cual debería ser en mi opinión causal de despido por incompetencia dado el cargo del funcionario.
