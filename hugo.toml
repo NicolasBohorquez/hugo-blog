@@ -7,6 +7,10 @@ theme = "mainroad"
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = false
 
+[Author] # Used in authorbox
+  bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
+  avatar = "img/avatar.png"
+
 [languages]
   [languages.en]
     contentDir = 'content/'
@@ -25,10 +29,16 @@ defaultContentLanguageInSubdir = false
     [languages.es.params.logo]
       subtitle = 'Lo que ves depende de lo que estas buscando'
     
-[Author] # Used in authorbox
-  bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
-  avatar = "img/avatar.png"
-
+[menus]
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menus.main]]
+    name = 'RSS'
+    pageRef = '/rss'
+    weight = 20
+  
 [Params]
   authorbox = true # Show authorbox at bottom of pages if true
   copyright = "Nicolas Bohorquez" # Footer copyright holder, otherwise will use site title
