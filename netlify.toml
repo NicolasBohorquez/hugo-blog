@@ -4,15 +4,3 @@
 
 [build.environment]
   HUGO_VERSION = "0.127.0"
-
-[[redirects]]
-  # Serve a full size version
-  from = "/img/full/:file"
-  to = "/.netlify/images?url=/img/:file"
-  status = 200
-
-[[redirects]]
-  # ...or serve a resized version
-  from = "/img/:width/:file"
-  to = "/.netlify/images?url=/img/:file&width=:width"
-  status = 200
