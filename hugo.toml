@@ -1,22 +1,21 @@
+baseURL = 'https://myview.is/'
 languageCode = 'en-US'
 title = 'My View'
 
 theme = "mainroad"
 
 defaultContentLanguage = 'en'
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
+
 [languages]
   [languages.en]
-    baseURL = 'https://myview.is/en/'
-    contentDir = 'content/en'
+    contentDir = 'content/'
     disabled = false
     languageCode = 'en-US'
     languageDirection = 'ltr'
     languageName = 'English'
     weight = 1
   [languages.es]
-    baseURL = 'https://myview.is/es/'
-    contentDir = 'content/es'
     disabled = false
     languageCode = 'es-CO'
     languageDirection = 'ltr'
