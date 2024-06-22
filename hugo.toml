@@ -3,7 +3,7 @@ languageCode = 'en-US'
 title = 'My View'
 
 theme = "mainroad"
-
+copyright = "2007-2024 Nicolas Bohorquez All rights reserved"
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = false
 
@@ -38,7 +38,14 @@ defaultContentLanguageInSubdir = false
     name = 'RSS'
     pageRef = '/rss'
     weight = 20
-  
+
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html', 'rss']
+
 [Params]
   authorbox = true # Show authorbox at bottom of pages if true
   copyright = "Nicolas Bohorquez" # Footer copyright holder, otherwise will use site title
@@ -96,6 +103,12 @@ defaultContentLanguageInSubdir = false
 [[Params.widgets.social.custom]]
   title = "Axumption"
   url = "https://axumption.com"
+  rel = "me"
+  #icon = "axumption.svg"
+
+[[Params.widgets.social.custom]]
+  title = "RSS"
+  url = "./index.xml"
   rel = "me"
   #icon = "axumption.svg"
 

@@ -9,10 +9,11 @@ thumbnail: "img/posts/fabio-bracht-_z0DiiaIhB4-unsplash.jpg" # Thumbnail image
 lang: es
 categories:
   - "Culture"
+  - "Connections"
 tags:
   - "Movies"
   - "Graphs"
-draft: true
+draft: false
 menu: side # Optional, add page to a menu. Options: main, side, footer
 comments: false # Enable Disqus comments for specific page
 authorbox: true # Enable authorbox for specific page
@@ -38,5 +39,6 @@ Ahora bien, para seguir de cada giro en la historia hice un mapa mental con las 
 
 Por supuesto que es una interpretación libre tanto del autor de la serie como mía tratando de seguir el ritmo de la historia con un grafo.
 
-![Connections 1-1 Tech Graph](img/posts/connections-1.1.png)
+![Connections 1-1 Tech Graph](/img/posts/connections-1.1.png)
+
 [Source](https://gist.github.com/NicolasBohorquez/1c2a9b35481816acccadb6c6c5b56365)

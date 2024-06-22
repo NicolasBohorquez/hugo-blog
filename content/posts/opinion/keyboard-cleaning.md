@@ -38,10 +38,10 @@ There are several [studies](https://www.researchgate.net/publication.231168007_B
 
 To accompany, a couple of images of the last cleaning:
 
-![Keyboard cleansing 1](img/posts/keyboard-cleaning1.jpg)
+![Keyboard cleaning 1](/img/posts/keyboard-cleaning1.jpg)
 
 **Edit**: This post is so old that it used a CRT monitor!
 
-![Keyboard cleansing 3](img/posts/keyboard-cleaning2.jpg)
+![Keyboard cleaning 3](/img/posts/keyboard-cleaning2.jpg)
 
 Finally, since winning is a matter of method, here are some instructions to clean [correctly](https://support.microsoft.com/es-es/windows/-c%C3%B3mo-limpio-el-mouse-o- the-microsoft-keyboard-889f667b-3909-35db-af54-5091373c6219) and its accessories.
