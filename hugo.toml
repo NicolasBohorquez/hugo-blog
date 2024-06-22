@@ -114,3 +114,9 @@ enableRobotsTXT = true
 
 [Params.widgets.languages]
   cached = true
+
+[sitemap]
+  changeFreq = 'daily'
+  disable = false
+  filename = 'sitemap.xml'
+  priority = -1
