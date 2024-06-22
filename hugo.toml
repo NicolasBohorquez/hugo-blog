@@ -19,6 +19,11 @@ defaultContentLanguageInSubdir = false
     languageDirection = 'ltr'
     languageName = 'English'
     weight = 1
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = 'About'
+        url = '/about'
+        weight = 10
   [languages.es]
     disabled = false
     languageCode = 'es-CO'
@@ -26,19 +31,13 @@ defaultContentLanguageInSubdir = false
     languageName = 'Español'
     title = 'MyView'
     weight = 2
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = 'Acerca de mi'
+        url = '/es/about'
+        weight = 10
     [languages.es.params.logo]
       subtitle = 'Lo que ves depende de lo que estas buscando'
-    
-[menus]
-  [[menus.main]]
-    name = 'About'
-    pageRef = '/about'
-    weight = 10
-  [[menus.main]]
-    name = 'RSS'
-    pageRef = '/rss'
-    weight = 20
-
 
 [outputs]
   home = ['html', 'rss']
@@ -96,21 +95,21 @@ defaultContentLanguageInSubdir = false
 
 [Params.widgets.social]
   cached = true
-  twitter = "nickmancol"
-  linkedin = "nickmancol"
   github = "NicolasBohorquez"
+  linkedin = "nickmancol"
+  twitter = "nickmancol"
 
 [[Params.widgets.social.custom]]
   title = "Axumption"
   url = "https://axumption.com"
-  rel = "me"
-  #icon = "axumption.svg"
+  rel = "Nicolas Bohorquez Blog"
+  icon = "axumption.svg"
 
 [[Params.widgets.social.custom]]
   title = "RSS"
   url = "./index.xml"
-  rel = "me"
-  #icon = "axumption.svg"
+  rel = "Nicolas Bohorquez Blog"
+  icon = "rss.svg"
 
 [Params.widgets.languages]
   cached = true
