@@ -1,0 +1,11 @@
+services:
+  hugo:
+    image: ggcr.io/orca-pod/docker-images/base-hugo:latest
+    command: 
+      sh -c "cd /home/ubuntu/code
+        && hugo server -D --bind 0.0.0.0"
+    volumes:
+      - .:/home/ubuntu/code
+    ports:
+      - 2022:22
+      - 1313:1313
