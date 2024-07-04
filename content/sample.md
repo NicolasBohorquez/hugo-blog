@@ -14,6 +14,7 @@ tags:
   - "Quarkus"
   - "VSCodium"
 draft: true
+asciinema: false
 menu: side # Optional, add page to a menu. Options: main, side, footer
 comments: false # Enable Disqus comments for specific page
 authorbox: true # Enable authorbox for specific page
