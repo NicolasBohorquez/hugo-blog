@@ -13,7 +13,7 @@ tags:
   - "Xavier"
   - "Nvidia"
   - "VSCodium"
-draft: true
+draft: false
 asciinema: true
 menu: side # Optional, add page to a menu. Options: main, side, footer
 comments: false # Enable Disqus comments for specific page
