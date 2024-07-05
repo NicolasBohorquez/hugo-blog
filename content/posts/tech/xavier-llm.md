@@ -28,22 +28,20 @@ widgets: # Enable sidebar widgets in given order per page
   - "social"
 ---
 
-Photo by <a href="https://unsplash.com/@davacorp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">DAVIS VARGAS</a> on <a href="https://unsplash.com/photos/brown-llama-on-green-grass-field-during-daytime-2vSNlKHn9h0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Photo by [DAVIS VARGAS](https://unsplash.com/@davacorp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/brown-llama-on-green-grass-field-during-daytime-2vSNlKHn9h0)
   
 
 Running a local LLM in a Single-Board-Computer (SBC) for 10W is fun and cheap, the results? good enough (for fun, no profit). This is a personal reminder of how to get it done.
 
 <!--more-->
 
-**TL;DR**: Flash the SBC to use the NVME disk instead of the SD card, install docker and run the ollama server with nvidia-gpu support.
-
-# Intro - Skip this
+## Intro - Skip this
 
 After my [Masters'](/about) degree I wanted to try some ML models, specially those that would allow me to [write](https://www.activestate.com/blog/how-to-monitor-social-distancing-using-python-and-object-detection/) about them, given that my laptop wasn't powerful enough I bought a [Xavier developer kit](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-xavier-series/) with some of the money that I got from tech writing. 
 
 Years later, I re-discovered the SBC getting dust in my apartment and decided to give it a new life as my personal LLM server. Ollama, docker and open source models allows me to have fun for a weekend.
 
-# Flashing the Nvidia Xavier
+## Flashing the Nvidia Xavier
 
 SBC works out-of-the-box with an SD card that is used as primary storage and boot device, this is an easy way to start but, it's terribly slow and storage space is limited. Instead you can [install an NVME disk](https://medium.com/@ramin.nabati/installing-an-nvme-ssd-drive-on-nvidia-jetson-xavier-37183c948978) directly into the board to be used as primary boot device since Linux For Tegra (L4T) version 4.4. 
 
@@ -55,10 +53,12 @@ To flash the [latest](https://developer.nvidia.com/embedded/jetson-linux-archive
 
 After flashing, Ubuntu 20.04 installation will require to set the size of the main partition.
 
-# Things to do after flashing
+## Things to do after flashing
 
 
-1. Install [CUDA](https://developer.nvidia.com/cuda-12-3-2-download-archive?target_os=Linux&target_arch=arm64-sbsa&Compilation=Native&Distribution=Ubuntu&target_version=20.04&target_type=deb_local) and other ML tooling
+### Install CUDA packages
+
+Install [CUDA](https://developer.nvidia.com/cuda-12-3-2-download-archive?target_os=Linux&target_arch=arm64-sbsa&Compilation=Native&Distribution=Ubuntu&target_version=20.04&target_type=deb_local) and other ML tooling
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/sbsa/cuda-ubuntu2004.pinsudo 
 mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -82,7 +82,7 @@ sudo apt-get install \
  libtbb-dev
 ```
 
-2. Setup Wake-up--on-LAN
+### Setup Wake-up--on-LAN
 
 Create a [service descriptor](https://necromuralist.github.io/posts/enabling-wake-on-lan/) to restart remotely after suspend the machine (`sudo systemctl suspend`),  in file */etc/systemd/system/wol.service* with the following contents:
 
@@ -105,7 +105,9 @@ sudo systemctl enable wol.service
 sudo systemctl status wol
 ```
 
-3. Install [jtop](https://github.com/rbonghi/jetson_stats)
+### Use Json-stats
+
+Install [jtop](https://github.com/rbonghi/jetson_stats)
 
 ```sh
 sudo apt install python3-pip
@@ -122,9 +124,9 @@ sudo jetson_clocks
 
 In my personal tests using the GPU to serve the Ollama LLMs is required to set the cooling to manual with at least 80% (5051 RPM).
 
-# Runninig Ollama
+## Running Ollama
 
-Nvidia introduced jetson containers as part of their [cloud-native](https://developer.nvidia.com/embedded/jetson-cloud-native) strategy, it allows to run containers using the GPU (cards and onboard) to accelerate the execution. In jetson the [github repo](https://github.com/dusty-nv/jetson-containers) mantains a series of ML/AI containers compatibles with several L4T kernels.
+Nvidia introduced jetson containers as part of their [cloud-native](https://developer.nvidia.com/embedded/jetson-cloud-native) strategy, it allows to run containers using the GPU (cards and onboard) to accelerate the execution. In jetson the [github repo](https://github.com/dusty-nv/jetson-containers) maintains a series of ML/AI containers compatibles with several L4T kernels.
 
 Start by installing the containers support:
 ```sh
@@ -146,7 +148,7 @@ Description=Starts Ollama docker server
 
 [Service]
 User=nickman
-WorkingDirectory=/home/nickman
+WorkingDirectory=/home/username
 Restart=always
 RestartSec=10
 #Type=oneshot
@@ -165,9 +167,13 @@ sudo systemctl enable ollama.service
 sudo systemctl status ollama
 ```
 
-# Demo
+## Demo
 
 Once you have installed all the dependencies, a simple call to [Ollama API](https://editor.swagger.io/?url=https://raw.githubusercontent.com/marscod/ollama/main/api/ollama_api_specification.json) results in a strong consumption of GPU resources:
 
 
 {{< asciinema key="jtop" >}}
+
+## Conclusion
+
+Despite being an old (6 years?) hardware, the Nvidia Xavier (8 GB) supports the new small LLMs, next time I´ll setup some benchmarks to check speed and quality(?).
