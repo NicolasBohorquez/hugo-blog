@@ -1,0 +1,34 @@
+---
+# Common-Defined params
+title: "Postgres Backups"
+date: "2024-09-05"
+lastmod: "2024-09-05"
+description: "How to get efficient pg_dump backups into Backblaze?"
+lead: "Efficient pg_dump backups synchronized to Backblaze" # Lead text
+thumbnail: "img/posts/" # Thumbnail image
+lang: en
+categories:
+  - "Devrgonomics"
+tags:
+  - "Data"
+  - "Postgres"  
+  - "Backups"
+draft: true
+asciinema: false
+menu: side # Optional, add page to a menu. Options: main, side, footer
+comments: false # Enable Disqus comments for specific page
+authorbox: true # Enable authorbox for specific page
+pager: true # Enable pager navigation (prev/next) for specific page
+toc: true # Enable Table of Contents for specific page
+sidebar: "right" # Enable sidebar (on the right side) per page
+widgets: # Enable sidebar widgets in given order per page
+  - "search"
+  - "recent"
+  - "taglist"
+  - "social"
+---
+
+Postgresql is one of my favorite tools, and after a POC you usually have to setup a way to backup/restore your data if you are not using a managed service, it is actually a not-too complicated task.
+
+<!--more-->
+
