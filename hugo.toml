@@ -3,14 +3,10 @@ languageCode = 'en-US'
 title = 'My View'
 theme = "mainroad"
 
-copyright = "2007-2024 Nicolas Bohorquez All rights reserved"
+copyright = "2007-2025 Nicolas Bohorquez All rights reserved"
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
-
-[Author] # Used in authorbox
-  bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
-  avatar = "img/avatar.png"
 
 [languages]
   [languages.en]
@@ -63,6 +59,10 @@ enableRobotsTXT = true
   schema = true # Enable Schema
   toc = true # Enable Table of Contents
   twitter_cards = true # Enable Twitter Cards if true
+
+[Params.Author] # Used in authorbox
+  bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
+  avatar = "img/avatar.png"
 
 [Params.style.vars]
   highlightColor = "#588157" #"#e22d30"
