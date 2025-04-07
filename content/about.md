@@ -5,7 +5,7 @@ date: "1981-06-29"
 description: "Who are you?"
 lead: "Nicolas' Profile" # Lead text
 lang: en
-draft: true
+draft: false
 menu: side # Optional, add page to a menu. Options: main, side, footer
 comments: false # Enable Disqus comments for specific page
 authorbox: false # Enable authorbox for specific page

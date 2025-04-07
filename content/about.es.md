@@ -5,7 +5,7 @@ date: "1981-06-29"
 description: "Quién eres?"
 lead: "Perfil de Nicolás" # Lead text
 lang: es
-draft: true
+draft: false
 menu: side # Optional, add page to a menu. Options: main, side, footer
 comments: false # Enable Disqus comments for specific page
 authorbox: false # Enable authorbox for specific page
