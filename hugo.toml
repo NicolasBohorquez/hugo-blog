@@ -51,7 +51,6 @@ enableRobotsTXT = true
   description = "Nicolas' Personal blog about everything. Title quote is from John Lubbock" # Site description. Used in meta description
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   mainSections = ["posts", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
-  name = "Nicolas Bohorquez"
   opengraph = true # Enable OpenGraph if true
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
@@ -61,6 +60,7 @@ enableRobotsTXT = true
   twitter_cards = true # Enable Twitter Cards if true
 
 [Params.Author] # Used in authorbox
+  name = "Nicolas Bohorquez"
   bio = "Seasoned startup founder, developer, software architect who likes to write, play and understand. I've founded three companies across the Americas and enjoy having good conversations, football, stats and history."
   avatar = "img/avatar.png"
 
