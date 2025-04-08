@@ -1,5 +1,11 @@
-{{ if and .Site.Config.Services.Disqus.Shortname (index .Params "comments" | default "true") (not hugo.IsServer) }}
+{{ if and (index .Params "comments" | default "true") (not hugo.IsServer) }}
 <section class="comments">
-	{{ template "_internal/disqus.html" . }}
+	<script src="https://utteranc.es/client.js"
+        repo="NicolasBohorquez/hugo-blog"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+	</script>
 </section>
 {{ end }}
