@@ -1,0 +1,208 @@
++++
+layout="single"
+slug="50.03"
+date="2025-04-05T23:03:26Z"
+title="50.03 Responsabilidades del Arquitecto de Software"
+type="slides"
+draft=false
+summary="Clase 3: Cúal es el trabajo? De qué soy responsable? Quién podrá ayudarme?"
++++
+
+<section data-markdown data-separator-notes="^Note:">
+    <script type="text/template">
+        ## 50.03 Responsabilidades del Arquitecto de Software
+        [Fundamentos de Arquitectura de Software][1]
+
+        [1]: https://www.myview.is/es/posts/50-59-teaching/50-fundamentos-arquitectura-software/50.03-responsabilidades-arquitecto/  "Clase 3 de 31"
+    </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+    <script type="text/template">
+        ## Responsabilidades clave
+        - Entender: El software como sistema <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Diseñar: Abstracciones, políticas, secuencias <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Convencer: Involucrar sistemicamente a los actores <!-- .element: class="fragment" data-fragment-index="3" -->
+        - Intervenir: Codificar / Programar / Desarrollar / Solucionar <!-- .element: class="fragment" data-fragment-index="4" -->
+    </script>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Entender
+            ![Entender](/img/slides/diagrams-ch3-understanding.png "Entendimiento vs capacidad de acción")
+        </script>
+    </section>
+    <section>
+        <h2>Entender el contexto</h2>
+        <small>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Startup</h3></p>
+                <p>
+                    <ul>
+                        <li>Alto riesgo es aceptable (deseable?)</li>
+                        <li>Decisiones/ejecuciones rápidas</li>
+                        <li>Altisima incertidumbre</li>
+                        <li>Equipo inestable</li>
+                    </ul>
+                </p>
+                <p><h3>Compañia</h3></p>
+                <p>
+                    <ul>
+                        <li>En crecimiento/escala</li>
+                        <li>Ejecutando una visión</li>
+                        <li>Procesos tácitos/explícitos</li>
+                        <li>Mayor aversión al riesgo </li>
+                    </ul>
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div>
+                <p><h3>Micro empresa</h3></p>
+                <p>
+                    <ul>
+                        <li>Roles/Clientes más estables</li>
+                        <li>Producto/Servicio caracterizable</li>
+                        <li>Construyendo una cultura</li>
+                        <li>Riesgos principalmente exógenos</li>
+                    </ul>
+                </p>
+                <p><h3>Entidad pública</h3></p>
+                <p>
+                    <ul>
+                        <li>Total aversión al riesgo </li>
+                        <li>Alta regulación</li>
+                        <li>Muy estable</li>
+                        <li>Altamente jerarquica</li>
+                    </ul>
+                </p>
+            </div>
+        </div></small>
+    </section>    
+</section>
+
+
+<section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Diseñar
+            ![Diseñar](/img/slides/diagrams-ch3-design.png "Diseño arquitectonico")
+        </script>
+    </section>
+    <section>
+        <h2>Herramientas de diseño</h2>
+        <small>
+        <div class="r-hstack">
+            <div>
+                <p>
+                    <ul>
+                        <li>TOGAF</li>
+                        <li>C4 model</li>
+                        <li><i>Architectural Decision Record</i></li>
+                        <li><i>Unified Modeling Language</i></li>
+                        <li>Patrones de Software </li>
+                    </ul>
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div>
+                <p>
+                    <ul>
+                        <li>Arquitecturas de Referencia</li>
+                        <li>Modelos de Gestión de riesgo</li>
+                        <li><i>Well-architected frameworks</i></li>
+                        <li>AI</li>
+                    </ul>
+                </p>
+            </div>
+        </div></small>
+    </section>    
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div style="width: 50%;">
+                <p><h3>Convencer</h3></p>
+                <p>Genera Cultura</p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>Los estándares de documentación, discusión, <br> calidad, ejecución, <em>accountability</em> <br>
+                        los fija el <strong>arquitect@</strong> <br>con su propia práctica y método. <br>
+                        Eventualmente son <strong>ad@ptados</strong> por toda la organización.</p>
+                </small>
+            </div>
+        </div>
+    </section>
+    <section><small>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Internamente</h3></p>
+                <p>
+                    <ul>
+                        <li>Generar productos de arquitectura</li>
+                        <li>Aplicar un diseño consistente</li>
+                        <li>Ad@ptar Metodología</li>
+                        <li>Hacer pruebas de concepto</li>
+                        <li>Registrar de opciones/decisiones</li>
+                    </ul>
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <p><h3 style="color: #616161;">Externamente</h3></p>
+                <p>
+                    <ul>
+                        <li>Stakeholders</li>
+                        <li>Management</li>
+                        <li>Desarrollo</li>
+                        <li>QA</li>
+                        <li>Facilitadores (Equipo de producto)</li>
+                        <li>Analistas</li>
+                        <li>Operadores</li>
+                    </ul>
+                </p>
+            </div>
+        </div></small>
+    </section>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # INTERVENIR
+            Codificar / Programar / Desarrollar / Desplegar
+        </script>
+        <aside class="notes">
+            Al menos solucionar los problemas directamente causados por el diseño
+        </aside>
+    </section>
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Ejercicio</h3></p>
+                <p>
+                    <img src="/img/slides/qr/qr-code-50.03.png" title="Referencias y contenido extra">
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>
+                        Escriba un problema personal <br>
+                        <span style="color: orange;">Importante pero NO urgente</span> <br>
+                        que crea que se puede solucionar con un sistema. <br>
+                        Use máximo 255 caracteres.
+                    </p>
+                </small>
+            </div>
+        </div>
+    </section>
+</section>
