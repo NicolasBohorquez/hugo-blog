@@ -1,0 +1,22 @@
+{{ define "main" }}
+	<div class="reveal">
+		<div class="slides">
+			{{ .Content }}
+		</div>
+	</div>
+
+	<script src="/js/reveal.js"></script>
+	<script src="/js/markdown/markdown.js"></script>
+	<script src="/js/highlight/highlight.js"></script>
+	<script src="/js/notes/notes.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+		});
+	</script>
+{{ end }}
