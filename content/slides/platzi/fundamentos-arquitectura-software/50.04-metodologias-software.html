@@ -1,0 +1,144 @@
++++
+layout="single"
+slug="50.04"
+date="2025-04-05T23:03:26Z"
+title="Arquitectura y Metodologías de desarrollo de Software"
+type="slides"
+draft=false
+summary="Clase 4: Cómo encaja la arquitectura en las metodologías de desarrollo de software?"
++++
+
+<section data-markdown data-separator-notes="^Note:">
+    <script type="text/template">
+        ## Arquitectura y Metodologías de desarrollo de Software
+        [Fundamentos de Arquitectura de Software][1]
+
+        [1]: https://www.myview.is/es/posts/50-59-teaching/50-fundamentos-arquitectura-software/50.03-responsabilidades-arquitecto/  "Clase 4 de 31"
+    </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+    <script type="text/template">
+        ## Puntos clave
+        - Ad@pte una metodología consistente con su contexto <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Prefiera una arquitectura evolutiva en lugar de predictiva <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Use Fitness Functions para probar continuamente su arquitectura <!-- .element: class="fragment" data-fragment-index="3" -->
+    </script>
+</section>
+
+<section>
+    <section>
+        <h2>Metodologias y valor agregado</h2>
+        <small>
+        <div class="r-hstack">
+            <div style="width: 40%;">
+                <img src="/img/slides/diagrams-ch4-methodologies.png" alt="Formalismos vs tiempo de entrega">
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="text-align: left;">
+                <input type="checkbox" name="chk_1"><label for="chk_1">Entrega de valor</label><br>
+                <input type="checkbox" name="chk_2"><label for="chk_2">Criterios de aceptación</label><br>
+                <input type="checkbox" name="chk_3"><label for="chk_3">Periodo del ciclo</label><br>
+                <input type="checkbox" name="chk_4"><label for="chk_4">Subproductos generados</label><br>
+                <input type="checkbox" name="chk_5"><label for="chk_5">Automatizacion</label><br>
+                <input type="checkbox" name="chk_6"><label for="chk_6">Forma de comunicación</label><br>
+            </div>
+        </div></small>
+    </section>    
+</section>
+
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <h3>Arquitecturas Evolutivas</h3>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div>
+                <small>
+                    <p>
+                        <ul>
+                            <li>Integre las tareas de arquitectura dentro del ciclo <em>DevOps</em></li>
+                            <li>Especifique una metodología de manejo <em>consistente</em> de la deuda técnica</li>
+                            <li>Defina métricas que impliquen necesidad de (re)diseño </li>
+                            <li>Use etiquetas en tareas del backlog relacionadas con arquitectura</li>
+                            <li>Mantenga una memoria de decisiones arquitectonicas </li>
+                        </ul>
+                    </p>
+                </small>
+            </div>
+        </div>
+    </section>    
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Cómo diseñar una arquitectura evolutiva?
+            - Remueva la variabilidad innecesaria <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Promueva decisiones reversibles (<em>undo</em>) <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Incluya capas anticorrupción <!-- .element: class="fragment" data-fragment-index="3" -->
+            - Prefiera librerias a frameworks <!-- .element: class="fragment" data-fragment-index="4" -->
+            - Aplique versionamiento a los servicios internos <!-- .element: class="fragment" data-fragment-index="5" -->
+        </script>
+    </section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Malas prácticas
+            - Caer en la trampa del 10% de las AI/Low Code tools <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Construir alrededor de un proveedor <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Mezclar cargas analiticas en sistemas operacionales <!-- .element: class="fragment" data-fragment-index="3" -->
+            - Resume Driven Development <!-- .element: class="fragment" data-fragment-index="4" -->
+            - Trabajar con ciclos de entrega largos: Parálisis por Análisis <!-- .element: class="fragment" data-fragment-index="5" -->
+            - Aceptar sistemas infinitamente personalizables <!-- .element: class="fragment" data-fragment-index="6" -->
+        </script>
+    </section>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # FITNESS Functions
+            Lo que no se mide no se puede mejorar...
+        </script>
+    </section>
+    <section><small>
+        <div class="r-hstack">
+            <div>
+                <h3>Testing</h3>
+                <p>Existe en todas las metodologías</p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <p>
+                    Las <em>Fitness Functions</em> son las pruebas unitarias de la Arquitectura de Software.
+                </p>
+            </div>
+        </div></small>
+    </section>
+    <section>
+        <img src="/img/slides/diagrams-ch4-fitness-functions.png" alt="Fitness Functions">
+    </section>
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Ejercicio</h3></p>
+                <p>
+                    <img src="/img/slides/qr/qr-code-50.04.png" title="Referencias y contenido extra">
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>
+                        Escriba las adaptaciones que su organización <br>
+                        está dispuesta a aceptar respecto a la forma <br>
+                        canónica de la metodología de desarrollo seleccionada. <br>  
+                        <p><small><em>Por qué son aceptables esas modificaciones ?</em></small></p>
+                    </p>
+                </small>
+            </div>
+        </div>
+    </section>
+</section>
