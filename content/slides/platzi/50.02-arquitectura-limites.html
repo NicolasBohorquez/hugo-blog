@@ -1,0 +1,163 @@
++++
+layout="single"
+slug="50.02"
+date="2025-04-05T23:02:26Z"
+title="Límites de la Arquitectura de Software"
+type="slides"
+draft=false
+summary="Clase 2: Cúal es el objeto de estudio de la Arquitectura de Software? Qué tipos de problemas soluciona la Arquitectura de Software?"
++++
+
+<section data-markdown data-separator-notes="^Note:">
+    <script type="text/template">
+        ## Límites de la Arquitectura de Software
+        [Fundamentos de Arquitectura de Software][1]
+
+        [1]: https://www.myview.is/es/posts/50-59-teaching/50-fundamentos-arquitectura-software/50.01-arquitectura-era-ai/  "Clase 1 de 31"
+    </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+    <script type="text/template">
+        ## Puntos Clave
+        - La Arquitectura de Software tiene que ver con todo lo importante <!-- .element: class="fragment" data-fragment-index="1" -->
+        - La Arquitectura de Software es un juego de negociación continua <!-- .element: class="fragment" data-fragment-index="2" -->
+        - La Arquitectura de Software soluciona problemas esenciales <!-- .element: class="fragment" data-fragment-index="3" -->
+    </script>
+</section>
+
+<section>
+    <section>
+        <h2>Aspectos importantes de los Sistemas</h2>
+        <div class="r-hstack">
+            <div>
+                <ul>
+                    <li>Usabilidad</li>
+                    <li>Observabilidad</li>
+                    <li>Extensibilidad</li>
+                    <li>Escalabilidad</li>
+                    <li>Disponibilidad</li>
+                    <li>Mantenibilidad</li>
+                    <li>Seguridad</li>
+                </ul>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div>
+                <ul>
+                    <li>Costo</li>
+                    <li>Integracion</li>
+                    <li>Regulación</li>
+                    <li>Resiliencia</li>
+                    <li>Rendimiento</li>
+                    <li>Influencia sobre el entorno</li>
+                    <li>Gestión del conocimiento</li>
+                    <li>Estructura</li>
+                    <li>Automatización</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Negociación Continua</h2>
+        <p>Usualmente no existen los recursos <br>
+            / tiempo / voluntad / conocimiento / estabilidad <br>
+            para que el arquitect@ encuentre el máximo global de todos los aspectos importantes de un sistema.</p>
+    </section>
+    <section data-markdown data-separator-notes="^Note:" data-background="#dddddd">
+        <script type="text/template">
+            Cada decisión del arquitect@ tiene una serie de implicaciones positivas y negativas sobre el sistema. Además de un <strong>costo de oportunidad</strong>.
+        </script>
+    </section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Incidentales</h3></p>
+                <p>
+                    Tareas concernientes a la implementación técnica de los conceptos
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;">
+                <p><h3 style="color: #616161;">Esenciales</h3></p>
+                <p>
+                    Tareas concernientes a construcciones conceptuales complejas
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Problemas esenciales</h3></p>
+                <ul>
+                    <li>Nivel de complejidad</li>
+                    <li>Conformidad</li>
+                    <li>Tolerancia al cambio</li>
+                    <li>Invisibilidad</li>
+                </ul>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div>&nbsp;</div>
+        </div>
+        <aside class="notes">
+            Observabilidad ->
+                Complejidad: simple? complicado? complejo?
+                Conformidad: mínimos aceptables?
+                Tolerancia: sobrevivimos sin ella?
+                Invisibilidad: efectos desconocidos?
+                Framework: Opentelemetry / Skywalking
+                Storage: RDBMS / TimeSeries
+                Protocolo: HTTP / gRPC
+        </aside>
+    </section>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # La verdad yace en los detalles
+        </script>
+        <aside class="notes">
+            Paul Auster, The Brooklyn Follies
+        </aside>
+    </section>
+    <section>
+        <h2>Modelo de priorización de Eisenhower</h2>
+        <div class="r-hstack">
+            <div style="width: 40%;"><img src="/img/slides/diagrams-ch2-prioritization.png"></div>
+            <div><small>
+                <ol>
+                    <li>Importante y Urgente</li>
+                    <li>Importante pero no Urgente</li>
+                    <li>Urgente pero no Importante</li>
+                    <li>Ni Urgente ni Importante</li>
+                </ol>
+            </small></div>
+        </div>
+    </section>
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Ejercicio</h3></p>
+                <p>
+                    <img src="/img/slides/qr/qr-code-50.02.png" title="Referencias y contenido extra">
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>Haga una lista de chequeo para clasificar cualquier problema como:</p>
+                    <ul>
+                        <li>Importante y Urgente</li>
+                        <li>Importante pero no Urgente</li>
+                        <li>Urgente pero no Importante</li>
+                        <li>Ni Urgente ni Importante</li>
+                    </ul>
+                </small>
+            </div>
+        </div>
+    </section>
+</section>
