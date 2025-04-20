@@ -1,0 +1,186 @@
++++
+layout="single"
+slug="50.05"
+date="2025-04-05T23:05:26Z"
+title="Expectativas y Comunicación en la Arquitectura de Software"
+type="slides"
+draft=false
+summary="Clase 5: Cómo encaja la arquitectura en las metodologías de desarrollo de software?"
++++
+
+<section data-markdown data-separator-notes="^Note:">
+    <script type="text/template">
+        ## Expectativas y Comunicación en la Arquitectura de Software
+        [Fundamentos de Arquitectura de Software][1]
+
+        [1]: https://www.myview.is/es/posts/50-59-teaching/50-fundamentos-arquitectura-software/50.05-comunicacion-arquitectura/ "Clase 5 de 31"
+    </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+    <script type="text/template">
+        ## Puntos clave
+        - Diferencie claramente el espacio del problema del espacio de solución <!-- .element: class="fragment" data-fragment-index="1" -->
+        - No luche contra La ley de Conway <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Aliviane la carga cognitiva <!-- .element: class="fragment" data-fragment-index="3" -->
+    </script>
+</section>
+
+<section>
+    <section>
+        <h2>Espacio de problema y solución</h2>
+        <small>
+        <div class="r-hstack">
+            <div style="width: 40%;">
+                <img src="/img/slides/diagrams-ch5-problem-solution-spaces.png" alt="Intersección entre Porque-Que-Como">
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="text-align: left;">
+                <ul>
+                    <li>Los 5 WHY</li>
+                    <li>Qué problema queremos resolver?</li>
+                    <li>Por qué se necesita una solución?</li>
+                    <li>Por qué ocurre el problema?</li>
+                    <li>Qué alternativas hay de solución?</li>
+                    <li>Por qué queremos hacerlo dadas las restricciones conocidas?</li>
+                </ul>
+            </div>
+        </div></small>
+    </section>
+    <section>
+        <h2><em>Necesitamos un microservicio de detección de fraude</em></h2>
+        <div class="r-stack">			
+            <p class="fragment fade-in-then-out"><em>Claro que si!, voy a usar unos prompts que sacan un modelo en Julia con API GraphQL y exactitud de más del 90%</em></p>
+            <p class="fragment fade-in-then-out"><em>Qué consideramos fraude?</em></p>
+        </div>
+    </section>    
+z`</section>
+
+<section>
+    <section>
+        <h2>La ley de Conway</h2>
+        <div class="r-hstack">
+            <div>
+                <blockquote><em>Organizations which design systems … are constrained to produce designs which are copies
+                    of the communication structures of these organizations.</em></blockquote>
+            </div>
+            <div>
+                <img src="https://bonkersworld.net/img/2011-06-27_organizational_charts.png" alt="Organizational charts">
+            </div>
+            <aside class="notes">
+                Melvin Conway, 1967
+            </aside>
+        </div>
+    </section>    
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Usando la ley 
+            > Organizations should evolve their team 
+            > and organizational structure to achieve 
+            > the desired architecture. 
+            >
+            > The goal is for your architecture to support 
+            > the ability of teams to get their work done 
+            >
+            > —from design through to deployment— 
+            >
+            > without requiring 
+            > high-bandwidth communication between teams.
+
+            Note: Accelerate - Nicole Forsgren PhD (Author), Jez Humble (Author), Gene Kim (Author)
+        </script>
+    </section>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # Comunicando la arquitectura
+            El medio es el mensaje
+
+            Hypermedia (Hypertexto / Audio / Video / AI)
+
+            Note: Marshall McLuhan, Understanding Media: The Extensions of Man, 1963
+        </script>
+    </section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <h3>Documentos</h3>
+                <p>No tienen sentido <br>
+                    sin comentarios y control de cambios</p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <p>
+                    <ul>
+                        <li>Use una plantilla</li>
+                        <li>Solicite feedback explicitamente en secciones especificas</li>
+                        <li>No acepte "Por mí está bien"</li>
+                        <li>Establezca fechas de corte</li>
+                    </ul>
+                </p>
+            </div>
+            <aside class="notes">
+                Architectural Desicion Record
+            </aside>
+        </div>
+    </section>
+    <section>
+        <h2>Diagramas</h2>
+        <div class="r-hstack">
+            <div>
+                <div>
+                    <h3>C4 Model</h3>
+                    <p>4 Niveles deductivos<br></p>
+                </div>
+                <div>
+                    <h3>UML</h3>
+                    <p>14 Tipos de diagramas<br></p>
+                </div>
+            </div>
+            <div style="width: 10%;"></div>
+            <div>
+                <div>
+                <h3>Secuencia</h3>
+                <p>Mensajes entre actores <br>
+                    a traves del tiempo</p>
+                </div>
+                <div>
+                    <h3>BPMN 2.0</h3>
+                    <p>Business Process Management <br>
+                        Notation</p>
+                    </div>
+            </div>
+            <aside class="notes">
+                Architectural Decission Record
+            </aside>
+        </div>
+    </section>
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Ejercicio</h3></p>
+                <p>
+                    <img src="/img/slides/qr/qr-code-50.05.png" title="Referencias y contenido extra">
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>
+                        Reescriba el problema del ejercicio 3<br>
+                        diferenciando el espacio de problema del espacio de solución.<br>
+                        Use técnicas como los 5 WHY o<br>  
+                        los 6 sombreros <br>
+                        para ahondar en el espacio del problema.
+                        <p><small><em>Puede llegar a hacer una especificación de producto?</em></small></p>
+                    </p>
+                </small>
+            </div>
+        </div>
+    </section>
+</section>
