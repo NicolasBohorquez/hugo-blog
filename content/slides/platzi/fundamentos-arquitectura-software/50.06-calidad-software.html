@@ -1,0 +1,166 @@
++++
+layout="single"
+slug="50.06"
+date="2025-04-05T23:05:26Z"
+title="Atributos de calidad del Software"
+type="slides"
+draft=false
+summary="Clase 6: Qué hace del software un buen producto?"
++++
+
+<section data-markdown data-separator-notes="^Note:">
+    <script type="text/template">
+        ## Atributos de calidad del Software
+        [Fundamentos de Arquitectura de Software][1]
+
+        [1]: https://www.myview.is/es/posts/50-59-teaching/50-fundamentos-arquitectura-software/50.06-calidad-software/ "Clase 6 de 31"
+    </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+    <script type="text/template">
+        ## Puntos clave
+        - Entender los requisitos funcionales <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Dominar los requisitos NO funcionales <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Comunicar riesgos y restricciones <!-- .element: class="fragment" data-fragment-index="3" -->
+    </script>
+</section>
+
+<section>
+    <section>
+        <h2>Requisitos</h2>
+        <div class="r-hstack">
+            <div>
+                <p style="text-align: left;">
+                    <input type="checkbox" name="chk_1"><label for="chk_1"> Quién?</label><br> 
+                    <input type="checkbox" name="chk_1"><label for="chk_2"> Qué?</label><br> 
+                    <input type="checkbox" name="chk_1"><label for="chk_3"> Cómo se verifica?</label><br>
+                    <input type="checkbox" name="chk_1"><label for="chk_4"> Qué lo limita?</label><br>
+                    <input type="checkbox" name="chk_1"><label for="chk_5"> Cómo falla?</label>
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <p>
+                    <ul>
+                        <li>Capacidades entregadas <br>al usuario</li>
+                        <li>Procesos que necesitan <br>ser soportados</li>
+                        <li>Controles de acceso <br>y regulación</li>
+                        <li>Excepciones conocidas</li>
+                        <li>Lógica de negocio</li>
+                    </ul>
+                </p>
+            </div>
+            <aside class="notes">
+                - Casos de uso <br>
+                - Historias de usuario <br>
+                - Backlog de productos <br>
+                - Story Mapping <br>
+                - Apuestas
+            </aside>
+        </div>
+    </section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # Método Amazon 
+            - Press release
+            - FAQ
+            - Feedback
+            - Product spec
+        </script>
+    </section>  
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## NFR
+            - "*idad" <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Costo <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Impacto <!-- .element: class="fragment" data-fragment-index="3" -->
+        </script>
+    </section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## \b\w+idad\b
+            - Seguridad
+            - Disponibilidad
+            - Confiabilidad
+            - Usabilidad
+            - Observabilidad
+            - Extensibilidad
+            - Escalabilidad
+            - Disponibilidad
+        </script>
+    </section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Costo
+            - Fijos y variables
+            - Infraestructura, licenciamiento, desarrollo, oportunidad, ambiental, social
+            - Explicitos, implicitos
+        </script>
+    </section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Impacto
+            - Corto / Largo plazo
+            - Priorización
+            - Económico
+        </script>
+    </section>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # Riesgos
+            - Lo que sabemos que sabemos
+            - Lo que sabemos que NO sabemos
+            - Lo que NO sabemos que NO sabemos
+        </script>
+    </section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # Restricciones
+            - Regulatorias
+            - Sociales
+            - Técnicas
+            - Morales
+            - Rendimiento
+            - Físicas
+            - Presupuestales
+        </script>
+    </section>
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Ejercicio</h3></p>
+                <p>
+                    <img src="/img/slides/qr/qr-code-50.06.png" title="Referencias y contenido extra">
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>
+                        Clasifique los NFR del espacio <br>
+                        de solución al problema refinado <br> 
+                        en el ejericio <a href="https://www.myview.is/slides/platzi/fundamentos-arquitectura-software/50.05/">anterior</a>, entre:
+                        <ul>
+                            <li>Importante y Urgente</li>
+                            <li>Importante pero no Urgente</li>
+                            <li>Urgente pero no Importante</li>
+                            <li>Ni Urgente ni Importante</li>
+                        </ul>
+                        <p>Use la lista de chequeo del <a href="https://www.myview.is/slides/platzi/fundamentos-arquitectura-software/50.02/">ejercicio 2</a>.<br>
+                        La lista de chequeo cubre todo lo necesario?</p>
+                    </p>
+                </small>
+            </div>
+        </div>
+    </section>
+</section>
