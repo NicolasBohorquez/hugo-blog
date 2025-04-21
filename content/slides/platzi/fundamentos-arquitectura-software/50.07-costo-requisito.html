@@ -1,0 +1,109 @@
++++
+layout="single"
+slug="50.06"
+date="2025-04-05T23:05:26Z"
+title="El costo como requisito no funcional"
+type="slides"
+draft=false
+summary="Clase 7: Quién paga por lo que hacemos los arquitectos? Cómo justificamos el cheque?"
++++
+
+<section data-markdown data-separator-notes="^Note:">
+    <script type="text/template">
+        ## El costo como requisito no funcional
+        [Fundamentos de Arquitectura de Software][1]
+
+        [1]: https://www.myview.is/es/posts/50-59-teaching/50-fundamentos-arquitectura-software/50.06-calidad-software/ "Clase 7 de 31"
+    </script>
+</section>
+
+<section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+    <script type="text/template">
+        ## Puntos clave
+        - Si el costo es mayor al ingreso operacional, riesgo aumenta <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Etiquetar las cargas de trabajo con base en la criticidad <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Observabilidad es frenemy del control de costos  <!-- .element: class="fragment" data-fragment-index="3" -->
+    </script>
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:">
+        <script type="text/template">
+            # Costo como NFR 
+            - Total Cost of Ownership
+            - Capital Expenditure (CapEx)
+            - Operational Expenditure (OpEx)
+            - Human Resource and Training Cost
+        </script>
+        <script type="text/template">
+            ![Dependencias Operacionales](/img/slides/free-credits.jpeg "Créditos como dependencia")
+
+            Note: Dalton W. Cole
+        </script>
+        <script type="text/template">
+            # Optimización de Costo Continua 
+            - Establecer presupuesto y proyección <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Incrementar eficiencia técnica <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Aplicar estandarización y governanza <!-- .element: class="fragment" data-fragment-index="3" -->
+            - Automatizar monitoreo <!-- .element: class="fragment" data-fragment-index="4" -->
+            - Reducir la complejidad arquitectonica <!-- .element: class="fragment" data-fragment-index="4" -->
+
+            Note: eficiencia técnica: Mejor algoritmo, estructura de datos, sistema de más bajo nivel, menos precision, paralelización
+        </script>
+        <script type="text/template">
+            ## Clasificación de carga por criticidad
+            - Esencial: DEBE Funcionar sin importar el costo
+            - Importante: Acepta rangos mas flexibles de nivel de servicio
+            - Accesorio: Es posible minimizar
+        </script>
+    </section>  
+</section>
+
+<section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Telemetria / Monitoreo / Observabilidad
+            - Qué esta funcionando mal y por qué? <!-- .element: class="fragment" data-fragment-index="1" -->
+            - Médidas -> Métricas <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Logging <!-- .element: class="fragment" data-fragment-index="3" -->
+            - Trazas <!-- .element: class="fragment" data-fragment-index="4" -->
+        </script>
+    </section>
+    <section data-markdown data-separator-notes="^Note:" data-separator-vertical="^\n--\n$">
+        <script type="text/template">
+            ## Efecto del observador
+            ![Costo de observar en un arquitectura orientada a microservicios](/img/slides/napkin-logging-cost.jpg "La cura resulta mas mala que la enfermedad")
+
+            Note: Ben Sigelman, 2021
+        </script>
+    </section>
+</section>
+
+<section>
+    <section>
+        <div class="r-hstack">
+            <div>
+                <p><h3>Ejercicio</h3></p>
+                <p>
+                    <img src="/img/slides/qr/qr-code-50.07.png" title="Referencias y contenido extra">
+                </p>
+            </div>
+            <div style="width: 10%;">&nbsp;</div>
+            <div style="background-color: #dddddd;color: #616161;padding: 20px;">
+                <small>
+                    <p>
+                        Cuanto es su presupuesto <br>
+                        para solucionar el problema enunciado en <br>
+                        en el ejericio <a href="https://www.myview.is/slides/platzi/fundamentos-arquitectura-software/50.05/">anterior</a>? Calcule:
+                        <ul>
+                            <li>Horas/hombre</li>
+                            <li>Horas/AI</li>
+                            <li>OpEx 1/3/6 meses</li>
+                        </ul>
+                        <p>Vale la pena hacer un modelo financiero?</p>
+                    </p>
+                </small>
+            </div>
+        </div>
+    </section>
+</section>
