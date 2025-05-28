@@ -101,12 +101,6 @@ enableRobotsTXT = true
   twitter = "nickmancol"
 
 [[Params.widgets.social.custom]]
-  title = "Axumption"
-  url = "https://axumption.com"
-  rel = "Nicolas Bohorquez Blog"
-  icon = "axumption.svg"
-
-[[Params.widgets.social.custom]]
   title = "RSS"
   url = "./index.xml"
   rel = "Nicolas Bohorquez Blog"
